@@ -1,0 +1,10 @@
+type Agent {
+    uuid: ID!
+    name: String!
+    role: String!
+}
+
+type Query {
+    getAgentByName(agentName: String!): Agent
+    Agents(agentName: String, role: String): [Agent!]!
+}
